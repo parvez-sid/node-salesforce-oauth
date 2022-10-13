@@ -9,6 +9,7 @@ const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const oauthRouter = require('./routes/oauth.routes');
+const postsRouter = require('./routes/posts.router');
 
 var app = express();
 
@@ -46,6 +47,7 @@ app.use((req, res, next) => {
 
 app.use('/', indexRouter);
 app.use('/api/v1/authorize', oauthRouter);
+app.use('/api/v1/posts', postsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

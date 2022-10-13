@@ -1,7 +1,6 @@
 const axios = require('axios');
 
 exports.generateAccessToken = async (req, res, next) => {
-
     // POST Request (To get Access Token)
             
     try{
